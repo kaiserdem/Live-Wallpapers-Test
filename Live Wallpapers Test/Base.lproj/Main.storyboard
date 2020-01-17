@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main WallpapersVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainWallpapersVC" customModule="Live_Wallpapers_Test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfL-lT-kp6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gf-TM-fBG" customClass="PHLivePhotoView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXW-7l-VFR">
+                                        <rect key="frame" x="143" y="578" width="89" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Скачать"/>
+                                        <connections>
+                                            <action selector="saveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e4L-63-z8r"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rCp-uh-n9h">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rCp-uh-n9h" secondAttribute="bottom" id="7NE-IG-4Kg"/>
+                                    <constraint firstItem="0gf-TM-fBG" firstAttribute="top" secondItem="jfL-lT-kp6" secondAttribute="top" id="HNv-da-DYc"/>
+                                    <constraint firstAttribute="trailing" secondItem="0gf-TM-fBG" secondAttribute="trailing" id="Lnr-ko-wOB"/>
+                                    <constraint firstAttribute="trailing" secondItem="rCp-uh-n9h" secondAttribute="trailing" id="Rmb-Qy-T0M"/>
+                                    <constraint firstAttribute="bottom" secondItem="0gf-TM-fBG" secondAttribute="bottom" id="ZsD-9W-BS1"/>
+                                    <constraint firstItem="rCp-uh-n9h" firstAttribute="top" secondItem="jfL-lT-kp6" secondAttribute="top" id="dwJ-P2-e3W"/>
+                                    <constraint firstItem="rCp-uh-n9h" firstAttribute="leading" secondItem="jfL-lT-kp6" secondAttribute="leading" id="qZg-G3-eqb"/>
+                                    <constraint firstItem="0gf-TM-fBG" firstAttribute="leading" secondItem="jfL-lT-kp6" secondAttribute="leading" id="y0W-1F-waM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jfL-lT-kp6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="4aO-ut-a07"/>
+                            <constraint firstItem="jfL-lT-kp6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EOd-HZ-GlN"/>
+                            <constraint firstItem="jfL-lT-kp6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Imx-Hs-AwH"/>
+                            <constraint firstItem="jfL-lT-kp6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SSH-YF-Bap"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="backView" destination="jfL-lT-kp6" id="Ndh-td-osd"/>
+                        <outlet property="imageView" destination="rCp-uh-n9h" id="GQV-pm-yRV"/>
+                        <outlet property="livePhotoView" destination="0gf-TM-fBG" id="m0y-gL-W4Y"/>
+                        <outlet property="saveButton" destination="bXW-7l-VFR" id="8uS-vp-xBW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="102.99850074962519"/>
+        </scene>
+    </scenes>
+</document>

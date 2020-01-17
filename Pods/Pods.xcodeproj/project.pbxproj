@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01105CE9164FE637215DDA88BEF2CE9C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		029AA7B0EC1D06EEB497F22AB091D18E /* Pods-Live Wallpapers Test-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D42F51ED34DC19B6E959B9E5DDC2F61 /* Pods-Live Wallpapers Test-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A732B5494A0CDC22CACEBAAB4260AB2 /* Pods-Live Wallpapers Test-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2E1298F465D5079F284CD075905B69 /* Pods-Live Wallpapers Test-dummy.m */; };
+		1BE23526AA379D14F9DAF596BFAB08D5 /* LPLivePhotoGenerator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE39BB8E3FC691872CD7618C0EEFB495 /* LPLivePhotoGenerator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B50484240CA3D179715A004DF21B724 /* LPLivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D3610E3B2D52AB15EE7CADCDF84051 /* LPLivePhoto.swift */; };
+		6D8AF298953E3F6148B37685236D24E5 /* LPLivePhotoGenerator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C1A1D57FF8A7CFC4AEBE5E3CB80AF2 /* LPLivePhotoGenerator-dummy.m */; };
+		AFD7403E83E6900BD8BF81C25241E39E /* LPLivePhotoGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DBD42E93FC1A1F7298FFCA3C942F0A /* LPLivePhotoGenerator.swift */; };
+		BD2D74543603D9AE6E43F421EDE37242 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE084DAC3EBA6A00D162B091EBCBACCC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FD9A9EC0E0AB0E19277F08B589C3A1FA;
+			remoteInfo = LPLivePhotoGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08DBD42E93FC1A1F7298FFCA3C942F0A /* LPLivePhotoGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPLivePhotoGenerator.swift; path = LPLivePhotoGenerator/LPLivePhotoGenerator/LPLivePhotoGenerator.swift; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3A3BC773E683A745EB0BFAA1E5999B81 /* LPLivePhotoGenerator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LPLivePhotoGenerator.xcconfig; sourceTree = "<group>"; };
+		6D42F51ED34DC19B6E959B9E5DDC2F61 /* Pods-Live Wallpapers Test-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Live Wallpapers Test-umbrella.h"; sourceTree = "<group>"; };
+		71515F2305E5122C79078F45B806BCAF /* LPLivePhotoGenerator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LPLivePhotoGenerator-prefix.pch"; sourceTree = "<group>"; };
+		8DD7DAD42D12CE886C5E4F354EFD6B63 /* Pods-Live Wallpapers Test-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Live Wallpapers Test-Info.plist"; sourceTree = "<group>"; };
+		98D3610E3B2D52AB15EE7CADCDF84051 /* LPLivePhoto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LPLivePhoto.swift; path = LPLivePhotoGenerator/LPLivePhotoGenerator/LPLivePhoto.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A11513C03D98E0060BD2D6CEF864B721 /* Pods-Live Wallpapers Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Live Wallpapers Test.debug.xcconfig"; sourceTree = "<group>"; };
+		A8E53167A51DC5F3B2A6C83F09CDFB46 /* Pods-Live Wallpapers Test-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Live Wallpapers Test-frameworks.sh"; sourceTree = "<group>"; };
+		AF2E1298F465D5079F284CD075905B69 /* Pods-Live Wallpapers Test-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Live Wallpapers Test-dummy.m"; sourceTree = "<group>"; };
+		B14FD27ADC200630BF1E8CA16F069B66 /* Pods-Live Wallpapers Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Live Wallpapers Test.release.xcconfig"; sourceTree = "<group>"; };
+		CE39BB8E3FC691872CD7618C0EEFB495 /* LPLivePhotoGenerator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LPLivePhotoGenerator-umbrella.h"; sourceTree = "<group>"; };
+		CED6ABC5A8BC810C228943642BD85A55 /* Pods_Live_Wallpapers_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Live_Wallpapers_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AD00DB8D356F1FC81C184775B1A51C /* Pods-Live Wallpapers Test-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Live Wallpapers Test-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DD42817B850F5E1019C32019A36963F9 /* LPLivePhotoGenerator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LPLivePhotoGenerator.modulemap; sourceTree = "<group>"; };
+		DE01C218AE316BBADD11F177A4BB7740 /* LPLivePhotoGenerator-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LPLivePhotoGenerator-Info.plist"; sourceTree = "<group>"; };
+		E1D8B1B6EC66C51C587CC8DBB5CA647D /* Pods-Live Wallpapers Test.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Live Wallpapers Test.modulemap"; sourceTree = "<group>"; };
+		E7C1A1D57FF8A7CFC4AEBE5E3CB80AF2 /* LPLivePhotoGenerator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LPLivePhotoGenerator-dummy.m"; sourceTree = "<group>"; };
+		EB30013DBA27C453A004A110614080E6 /* LPLivePhotoGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LPLivePhotoGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79D97FE9D36BAC4590DBD5413D12E98 /* Pods-Live Wallpapers Test-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Live Wallpapers Test-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25DBAFCBFB18110D56623F24A147AFF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01105CE9164FE637215DDA88BEF2CE9C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE80D8C56C69D9DB42F8CA5083B5084F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2D74543603D9AE6E43F421EDE37242 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D175005FDFBFF852292E085F4B6C150 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC5E176D37AD2B67A5953DF7743194AB /* Pods-Live Wallpapers Test */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		19BCD93E64A21E718C4B83034B22747C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB30013DBA27C453A004A110614080E6 /* LPLivePhotoGenerator.framework */,
+				CED6ABC5A8BC810C228943642BD85A55 /* Pods_Live_Wallpapers_Test.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42A75C21809003453130CBFED7D6C472 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45890201A0CA88FAB57FA4604450D3AF /* LPLivePhotoGenerator */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		45890201A0CA88FAB57FA4604450D3AF /* LPLivePhotoGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				98D3610E3B2D52AB15EE7CADCDF84051 /* LPLivePhoto.swift */,
+				08DBD42E93FC1A1F7298FFCA3C942F0A /* LPLivePhotoGenerator.swift */,
+				55AD0D8EF2583A503B3E97B85EBFBFDC /* Support Files */,
+			);
+			path = LPLivePhotoGenerator;
+			sourceTree = "<group>";
+		};
+		55AD0D8EF2583A503B3E97B85EBFBFDC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD42817B850F5E1019C32019A36963F9 /* LPLivePhotoGenerator.modulemap */,
+				3A3BC773E683A745EB0BFAA1E5999B81 /* LPLivePhotoGenerator.xcconfig */,
+				E7C1A1D57FF8A7CFC4AEBE5E3CB80AF2 /* LPLivePhotoGenerator-dummy.m */,
+				DE01C218AE316BBADD11F177A4BB7740 /* LPLivePhotoGenerator-Info.plist */,
+				71515F2305E5122C79078F45B806BCAF /* LPLivePhotoGenerator-prefix.pch */,
+				CE39BB8E3FC691872CD7618C0EEFB495 /* LPLivePhotoGenerator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LPLivePhotoGenerator";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				42A75C21809003453130CBFED7D6C472 /* Pods */,
+				19BCD93E64A21E718C4B83034B22747C /* Products */,
+				0D175005FDFBFF852292E085F4B6C150 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC5E176D37AD2B67A5953DF7743194AB /* Pods-Live Wallpapers Test */ = {
+			isa = PBXGroup;
+			children = (
+				E1D8B1B6EC66C51C587CC8DBB5CA647D /* Pods-Live Wallpapers Test.modulemap */,
+				D3AD00DB8D356F1FC81C184775B1A51C /* Pods-Live Wallpapers Test-acknowledgements.markdown */,
+				F79D97FE9D36BAC4590DBD5413D12E98 /* Pods-Live Wallpapers Test-acknowledgements.plist */,
+				AF2E1298F465D5079F284CD075905B69 /* Pods-Live Wallpapers Test-dummy.m */,
+				A8E53167A51DC5F3B2A6C83F09CDFB46 /* Pods-Live Wallpapers Test-frameworks.sh */,
+				8DD7DAD42D12CE886C5E4F354EFD6B63 /* Pods-Live Wallpapers Test-Info.plist */,
+				6D42F51ED34DC19B6E959B9E5DDC2F61 /* Pods-Live Wallpapers Test-umbrella.h */,
+				A11513C03D98E0060BD2D6CEF864B721 /* Pods-Live Wallpapers Test.debug.xcconfig */,
+				B14FD27ADC200630BF1E8CA16F069B66 /* Pods-Live Wallpapers Test.release.xcconfig */,
+			);
+			name = "Pods-Live Wallpapers Test";
+			path = "Target Support Files/Pods-Live Wallpapers Test";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1FD75ED09E10422558603ACD847BD0B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BE23526AA379D14F9DAF596BFAB08D5 /* LPLivePhotoGenerator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9584A4838B50F6369C302AA34B199AE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				029AA7B0EC1D06EEB497F22AB091D18E /* Pods-Live Wallpapers Test-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2548A8ACCDA567547E903A9F4CF67306 /* Pods-Live Wallpapers Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EBCF462329380B060DF710370F5AE3E /* Build configuration list for PBXNativeTarget "Pods-Live Wallpapers Test" */;
+			buildPhases = (
+				F9584A4838B50F6369C302AA34B199AE /* Headers */,
+				A82F596923DFBC7629E405F20E8A3C82 /* Sources */,
+				DE80D8C56C69D9DB42F8CA5083B5084F /* Frameworks */,
+				8F92BAF326659A52057B3E2D0CD361F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CA093B509395EA59305803B2A1AF68E /* PBXTargetDependency */,
+			);
+			name = "Pods-Live Wallpapers Test";
+			productName = "Pods-Live Wallpapers Test";
+			productReference = CED6ABC5A8BC810C228943642BD85A55 /* Pods_Live_Wallpapers_Test.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FD9A9EC0E0AB0E19277F08B589C3A1FA /* LPLivePhotoGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B6A88DE91D2871595B12375B2650FF6 /* Build configuration list for PBXNativeTarget "LPLivePhotoGenerator" */;
+			buildPhases = (
+				1FD75ED09E10422558603ACD847BD0B0 /* Headers */,
+				1CF94303EE5E9220075054105D37F626 /* Sources */,
+				25DBAFCBFB18110D56623F24A147AFF8 /* Frameworks */,
+				6573CAC50EA62245148B9BFFFBA20DFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LPLivePhotoGenerator;
+			productName = LPLivePhotoGenerator;
+			productReference = EB30013DBA27C453A004A110614080E6 /* LPLivePhotoGenerator.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 19BCD93E64A21E718C4B83034B22747C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FD9A9EC0E0AB0E19277F08B589C3A1FA /* LPLivePhotoGenerator */,
+				2548A8ACCDA567547E903A9F4CF67306 /* Pods-Live Wallpapers Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6573CAC50EA62245148B9BFFFBA20DFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F92BAF326659A52057B3E2D0CD361F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CF94303EE5E9220075054105D37F626 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B50484240CA3D179715A004DF21B724 /* LPLivePhoto.swift in Sources */,
+				6D8AF298953E3F6148B37685236D24E5 /* LPLivePhotoGenerator-dummy.m in Sources */,
+				AFD7403E83E6900BD8BF81C25241E39E /* LPLivePhotoGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A82F596923DFBC7629E405F20E8A3C82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A732B5494A0CDC22CACEBAAB4260AB2 /* Pods-Live Wallpapers Test-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CA093B509395EA59305803B2A1AF68E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LPLivePhotoGenerator;
+			target = FD9A9EC0E0AB0E19277F08B589C3A1FA /* LPLivePhotoGenerator */;
+			targetProxy = EE084DAC3EBA6A00D162B091EBCBACCC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		32C2FB3BD9A2402E2347CE50F405010A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3839D98D72308F3A3A893619719CD820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14FD27ADC200630BF1E8CA16F069B66 /* Pods-Live Wallpapers Test.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5ECAE933BF5C6646A01054A3FA589ED1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A11513C03D98E0060BD2D6CEF864B721 /* Pods-Live Wallpapers Test.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		65E8432CA1AC1817F746BE6B5C4F067E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D8D0CC5DD5AD99BFF953FE3DC467EB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3BC773E683A745EB0BFAA1E5999B81 /* LPLivePhotoGenerator.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LPLivePhotoGenerator/LPLivePhotoGenerator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LPLivePhotoGenerator/LPLivePhotoGenerator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LPLivePhotoGenerator/LPLivePhotoGenerator.modulemap";
+				PRODUCT_MODULE_NAME = LPLivePhotoGenerator;
+				PRODUCT_NAME = LPLivePhotoGenerator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F3D075E6284F2C56B738F80DDB91B85D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3BC773E683A745EB0BFAA1E5999B81 /* LPLivePhotoGenerator.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LPLivePhotoGenerator/LPLivePhotoGenerator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LPLivePhotoGenerator/LPLivePhotoGenerator-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LPLivePhotoGenerator/LPLivePhotoGenerator.modulemap";
+				PRODUCT_MODULE_NAME = LPLivePhotoGenerator;
+				PRODUCT_NAME = LPLivePhotoGenerator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2EBCF462329380B060DF710370F5AE3E /* Build configuration list for PBXNativeTarget "Pods-Live Wallpapers Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ECAE933BF5C6646A01054A3FA589ED1 /* Debug */,
+				3839D98D72308F3A3A893619719CD820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B6A88DE91D2871595B12375B2650FF6 /* Build configuration list for PBXNativeTarget "LPLivePhotoGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8D0CC5DD5AD99BFF953FE3DC467EB12 /* Debug */,
+				F3D075E6284F2C56B738F80DDB91B85D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65E8432CA1AC1817F746BE6B5C4F067E /* Debug */,
+				32C2FB3BD9A2402E2347CE50F405010A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

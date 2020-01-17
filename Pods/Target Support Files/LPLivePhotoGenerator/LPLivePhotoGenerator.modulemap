@@ -1,0 +1,6 @@
+framework module LPLivePhotoGenerator {
+  umbrella header "LPLivePhotoGenerator-umbrella.h"
+
+  export *
+  module * { export * }
+}

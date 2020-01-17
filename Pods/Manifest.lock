@@ -1,0 +1,16 @@
+PODS:
+  - LPLivePhotoGenerator (0.7.0)
+
+DEPENDENCIES:
+  - LPLivePhotoGenerator
+
+SPEC REPOS:
+  trunk:
+    - LPLivePhotoGenerator
+
+SPEC CHECKSUMS:
+  LPLivePhotoGenerator: 8f0710332a9b03b3f17f11f73bc42234e6735a18
+
+PODFILE CHECKSUM: ae3d560cdd4cc08d36c51b7ca247c4115c9c3036
+
+COCOAPODS: 1.8.4
