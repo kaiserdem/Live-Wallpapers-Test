@@ -20,17 +20,37 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let bundlePath = Bundle.main.path(forResource: "video3", ofType: ".mov")
+    loadResourseToFilemanager()
     
-    copyfileToDocs(bundlePath!)
+    let videoUrl = checkVideoConteint()
+    let imageUrl = checkImageConteint()
+    
+    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!)
+    
   }
   
-  func copyfileToDocs(_ bundlePath: String){
+  func loadResourseToFilemanager() {
+    
+    let wallpapers = WallpaperList.getWallpaperList()[0].wallpapers
+    
+    for i in wallpapers {
+      let filenameImage = i.image + i.imageType
+      let bundlePathImage = Bundle.main.path(forResource: i.image, ofType: i.imageType)
+      
+      let filenameVideo = i.video + i.videoType
+      let bundlePathVideo = Bundle.main.path(forResource: i.video, ofType: i.videoType)
+      
+      copyfileToDocs(bundlePathImage!, filenameImage)
+      copyfileToDocs(bundlePathVideo!, filenameVideo)
+    }
+  }
+  
+  func copyfileToDocs(_ bundlePath: String, _ filename: String){
     
     print(bundlePath, "\n") //prints the correct path
     let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
     let fileManager = FileManager.default
-    let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("1.mov")
+    let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent(filename)
     let fullDestPathString = fullDestPath?.path
     print(fileManager.fileExists(atPath: bundlePath)) // prints true
     do
