@@ -13,6 +13,7 @@ import LPLivePhotoGenerator
 
 class MainWallpapersVC: BaseLivePhotoViewController {
   
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var backView: UIView!
   @IBOutlet weak var saveButton: UIButton!
@@ -25,7 +26,7 @@ class MainWallpapersVC: BaseLivePhotoViewController {
     let videoUrl = checkVideoConteint()
     let imageUrl = checkImageConteint()
     
-    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!)
+    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!, isSave: false)
     
   }
   
@@ -67,7 +68,7 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   
   private func checkImageConteint() -> URL? {
     
-    let filename = getDocumentsDirectory().appendingPathComponent("image1.jpg")
+    let filename = getDocumentsDirectory().appendingPathComponent("image2.jpg")
     
     if FileManager.default.fileExists(atPath: filename.path ) {
       print("saccess Image file is found")
@@ -81,7 +82,7 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   
   private func checkVideoConteint() -> URL? {
     
-    let filename = getDocumentsDirectory().appendingPathComponent("video1.mov")
+    let filename = getDocumentsDirectory().appendingPathComponent("video2.mov")
     
     if FileManager.default.fileExists(atPath: filename.path ) {
       print("saccess Video file is found")
@@ -95,18 +96,52 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   }
   
   
-  func renderWallpapers(imageUrl: URL, videoUrl: URL) {
+  func renderWallpapers(imageUrl: URL, videoUrl: URL, isSave: Bool?) {
+    
+    if isSave == false {
+      DispatchQueue.main.async {
+        self.livePhotoView.alpha = 0
+        self.imageView.alpha = 1
+        let data = try? Data(contentsOf: imageUrl)
+        self.imageView.image = UIImage(data: data!)
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
+      }
+    }
     
     LivePhoto.generate(from: imageUrl, videoURL: videoUrl, progress: { (percent) in
       print(percent)
       
     }) { [weak self] (livePhoto, resources) in
-      DispatchQueue.main.async {
-        self?.imageView.alpha = 0
-        self?.livePhotoView.livePhoto = livePhoto
-        self?.livePhotoView.startPlayback(with: .full)
+      self?.livePhotoView.livePhoto = livePhoto
+      self?.livePhotoView.startPlayback(with: .full)
+      
+      if let resources = resources {
+        
+        if isSave == false {
+          DispatchQueue.main.async {
+            self?.livePhotoView.alpha = 1
+            self?.imageView.alpha = 0
+            self?.activityIndicator.stopAnimating()
+            self?.activityIndicator.isHidden = true
+          }
+        }
+        if isSave == true {
+          LivePhoto.saveToLibrary(resources, completion: { (success) in
+            
+            if success {
+              if success {
+                self?.postAlert("Живая фотография сохранена в гелерею")
+              }
+              else {
+                self?.postAlert("Живая фотография не сохранена")
+              }
+            }
+          })
+        }
       }
     }
+ 
   }
   
   private func saveImagesToDisk(image: UIImage) -> URL? {
@@ -150,7 +185,10 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   }
   
   @IBAction func saveButtonAction(_ sender: Any) {
+    let videoUrl = checkVideoConteint()
+    let imageUrl = checkImageConteint()
     
+    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!, isSave: true)
   }
 }
 

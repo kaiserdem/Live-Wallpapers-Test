@@ -31,10 +31,7 @@ class BaseLivePhotoViewController: UIViewController, UIImagePickerControllerDele
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    livePhotoView = PHLivePhotoView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
-    view.addSubview(livePhotoView)
-    
-    livePhotoView.contentMode = .scaleAspectFit
+    livePhotoView.contentMode = .scaleAspectFill
     livePhotoView.delegate = self
     
     let livePhotoBadge = PHLivePhotoView.livePhotoBadgeImage(options: .overContent)
@@ -50,11 +47,7 @@ class BaseLivePhotoViewController: UIViewController, UIImagePickerControllerDele
     
     self.livePhotoBadgeLayer.contents = livePhotoBadgeImage
     livePhotoView.layer.addSublayer(self.livePhotoBadgeLayer)
-    
-    playerController = AVPlayerViewController()
-    if let playerView = playerController?.view {
-      //            self.view.addSubview(playerView)
-    }
+
   }
   
   override func viewDidAppear(_ animated: Bool) {
