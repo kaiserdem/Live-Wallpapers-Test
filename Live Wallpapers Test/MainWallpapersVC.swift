@@ -20,17 +20,34 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let videoUrl = checkVideoConteint()
+    let bundlePath = Bundle.main.path(forResource: "video3", ofType: ".mov")
     
-    let imageUrl = checkImageConteint()
-
-    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!)
+    copyfileToDocs(bundlePath!)
+  }
+  
+  func copyfileToDocs(_ bundlePath: String){
+    
+    print(bundlePath, "\n") //prints the correct path
+    let destPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    let fileManager = FileManager.default
+    let fullDestPath = NSURL(fileURLWithPath: destPath).appendingPathComponent("1.mov")
+    let fullDestPathString = fullDestPath?.path
+    print(fileManager.fileExists(atPath: bundlePath)) // prints true
+    do
+    {
+      try fileManager.copyItem(atPath: bundlePath, toPath: fullDestPathString!)
+      print("DB Copied")
+    }
+    catch
+    {
+      print("\n")
+      print(error)
+    }
   }
   
   private func checkImageConteint() -> URL? {
     
     let filename = getDocumentsDirectory().appendingPathComponent("image1.jpg")
-    print(filename)
     
     if FileManager.default.fileExists(atPath: filename.path ) {
       print("saccess Image file is found")
@@ -45,7 +62,6 @@ class MainWallpapersVC: BaseLivePhotoViewController {
   private func checkVideoConteint() -> URL? {
     
     let filename = getDocumentsDirectory().appendingPathComponent("video1.mov")
-    print(filename)
     
     if FileManager.default.fileExists(atPath: filename.path ) {
       print("saccess Video file is found")
@@ -73,12 +89,9 @@ class MainWallpapersVC: BaseLivePhotoViewController {
     }
   }
   
-  
-  
   private func saveImagesToDisk(image: UIImage) -> URL? {
     
-    
-    let namedImageFile = "image2.jpg"
+    let namedImageFile = "image3.jpg"
     
     let filename = getDocumentsDirectory().appendingPathComponent(namedImageFile)
     print(filename)

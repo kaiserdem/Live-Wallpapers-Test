@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7DB04CF5B1DD4C861FED9D70 /* Pods_Live_Wallpapers_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0760F7FB18EA1886C90EF6CC /* Pods_Live_Wallpapers_Test.framework */; };
+		ADAFAE7D23D2F55B00670EB4 /* video2.mov in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7723D2F55900670EB4 /* video2.mov */; };
+		ADAFAE7E23D2F55B00670EB4 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7823D2F55900670EB4 /* image3.jpg */; };
+		ADAFAE7F23D2F55B00670EB4 /* video3.mov in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7923D2F55A00670EB4 /* video3.mov */; };
+		ADAFAE8023D2F55B00670EB4 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7A23D2F55A00670EB4 /* image2.jpg */; };
+		ADAFAE8123D2F55B00670EB4 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7B23D2F55A00670EB4 /* image1.jpg */; };
+		ADAFAE8223D2F55B00670EB4 /* video1.mov in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7C23D2F55B00670EB4 /* video1.mov */; };
+		ADAFAE8423D2FA6000670EB4 /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAE8323D2FA6000670EB4 /* Wallpaper.swift */; };
 		ADB807AD23D1E01200847897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807AC23D1E01200847897 /* AppDelegate.swift */; };
 		ADB807AF23D1E01200847897 /* MainWallpapersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807AE23D1E01200847897 /* MainWallpapersVC.swift */; };
 		ADB807B223D1E01200847897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB807B023D1E01200847897 /* Main.storyboard */; };
@@ -16,13 +23,18 @@
 		ADB807BF23D1E61800847897 /* BaseLivePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807BE23D1E61800847897 /* BaseLivePhotoViewController.swift */; };
 		ADB807C123D1E6A600847897 /* LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807C023D1E6A600847897 /* LivePhoto.swift */; };
 		ADB807C323D1E73100847897 /* LivePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807C223D1E73100847897 /* LivePhotoViewController.swift */; };
-		ADB807E923D1FBA500847897 /* id121video.mov in Resources */ = {isa = PBXBuildFile; fileRef = ADB807E523D1FBA500847897 /* id121video.mov */; };
-		ADB807EA23D1FBA500847897 /* id103video.mov in Resources */ = {isa = PBXBuildFile; fileRef = ADB807E623D1FBA500847897 /* id103video.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0760F7FB18EA1886C90EF6CC /* Pods_Live_Wallpapers_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Live_Wallpapers_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E061D581A1D087871CB1B16 /* Pods-Live Wallpapers Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live Wallpapers Test.debug.xcconfig"; path = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test.debug.xcconfig"; sourceTree = "<group>"; };
+		ADAFAE7723D2F55900670EB4 /* video2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video2.mov; sourceTree = "<group>"; };
+		ADAFAE7823D2F55900670EB4 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		ADAFAE7923D2F55A00670EB4 /* video3.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video3.mov; sourceTree = "<group>"; };
+		ADAFAE7A23D2F55A00670EB4 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		ADAFAE7B23D2F55A00670EB4 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		ADAFAE7C23D2F55B00670EB4 /* video1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video1.mov; sourceTree = "<group>"; };
+		ADAFAE8323D2FA6000670EB4 /* Wallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
 		ADB807A923D1E01200847897 /* Live Wallpapers Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Live Wallpapers Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB807AC23D1E01200847897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADB807AE23D1E01200847897 /* MainWallpapersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWallpapersVC.swift; sourceTree = "<group>"; };
@@ -33,8 +45,6 @@
 		ADB807BE23D1E61800847897 /* BaseLivePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLivePhotoViewController.swift; sourceTree = "<group>"; };
 		ADB807C023D1E6A600847897 /* LivePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhoto.swift; sourceTree = "<group>"; };
 		ADB807C223D1E73100847897 /* LivePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhotoViewController.swift; sourceTree = "<group>"; };
-		ADB807E523D1FBA500847897 /* id121video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = id121video.mov; sourceTree = "<group>"; };
-		ADB807E623D1FBA500847897 /* id103video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = id103video.mov; sourceTree = "<group>"; };
 		DC16DE09A18FE95B865DBDA9 /* Pods-Live Wallpapers Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live Wallpapers Test.release.xcconfig"; path = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,9 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				ADB807AC23D1E01200847897 /* AppDelegate.swift */,
+				ADAFAE8323D2FA6000670EB4 /* Wallpaper.swift */,
+				ADB807C023D1E6A600847897 /* LivePhoto.swift */,
 				ADB807AE23D1E01200847897 /* MainWallpapersVC.swift */,
 				ADB807BE23D1E61800847897 /* BaseLivePhotoViewController.swift */,
-				ADB807C023D1E6A600847897 /* LivePhoto.swift */,
 				ADB807C223D1E73100847897 /* LivePhotoViewController.swift */,
 				ADB807B023D1E01200847897 /* Main.storyboard */,
 				ADB807B323D1E01300847897 /* Assets.xcassets */,
@@ -96,8 +107,12 @@
 		ADB807EC23D1FBB500847897 /* Video Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				ADB807E623D1FBA500847897 /* id103video.mov */,
-				ADB807E523D1FBA500847897 /* id121video.mov */,
+				ADAFAE7B23D2F55A00670EB4 /* image1.jpg */,
+				ADAFAE7A23D2F55A00670EB4 /* image2.jpg */,
+				ADAFAE7823D2F55900670EB4 /* image3.jpg */,
+				ADAFAE7C23D2F55B00670EB4 /* video1.mov */,
+				ADAFAE7723D2F55900670EB4 /* video2.mov */,
+				ADAFAE7923D2F55A00670EB4 /* video3.mov */,
 			);
 			path = "Video Resourses";
 			sourceTree = "<group>";
@@ -171,11 +186,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAFAE7D23D2F55B00670EB4 /* video2.mov in Resources */,
+				ADAFAE7E23D2F55B00670EB4 /* image3.jpg in Resources */,
+				ADAFAE7F23D2F55B00670EB4 /* video3.mov in Resources */,
+				ADAFAE8023D2F55B00670EB4 /* image2.jpg in Resources */,
+				ADAFAE8123D2F55B00670EB4 /* image1.jpg in Resources */,
+				ADAFAE8223D2F55B00670EB4 /* video1.mov in Resources */,
 				ADB807B723D1E01300847897 /* LaunchScreen.storyboard in Resources */,
 				ADB807B423D1E01300847897 /* Assets.xcassets in Resources */,
-				ADB807EA23D1FBA500847897 /* id103video.mov in Resources */,
 				ADB807B223D1E01200847897 /* Main.storyboard in Resources */,
-				ADB807E923D1FBA500847897 /* id121video.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +251,7 @@
 				ADB807C123D1E6A600847897 /* LivePhoto.swift in Sources */,
 				ADB807AF23D1E01200847897 /* MainWallpapersVC.swift in Sources */,
 				ADB807BF23D1E61800847897 /* BaseLivePhotoViewController.swift in Sources */,
+				ADAFAE8423D2FA6000670EB4 /* Wallpaper.swift in Sources */,
 				ADB807AD23D1E01200847897 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
