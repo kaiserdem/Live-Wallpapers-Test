@@ -16,16 +16,15 @@
 		ADAFAE8223D2F55B00670EB4 /* video1.mov in Resources */ = {isa = PBXBuildFile; fileRef = ADAFAE7C23D2F55B00670EB4 /* video1.mov */; };
 		ADAFAE8423D2FA6000670EB4 /* Wallpaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAE8323D2FA6000670EB4 /* Wallpaper.swift */; };
 		ADAFAE8723D2FB6400670EB4 /* WallpaperList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAE8623D2FB6400670EB4 /* WallpaperList.swift */; };
-		ADAFAE8923D30CE400670EB4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAE8823D30CE400670EB4 /* SecondViewController.swift */; };
+		ADAFAE8923D30CE400670EB4 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAE8823D30CE400670EB4 /* MenuVC.swift */; };
 		ADAFAE8B23D334BD00670EB4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAFAE8A23D334BD00670EB4 /* Extension.swift */; };
 		ADB807AD23D1E01200847897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807AC23D1E01200847897 /* AppDelegate.swift */; };
-		ADB807AF23D1E01200847897 /* MainWallpapersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807AE23D1E01200847897 /* MainWallpapersVC.swift */; };
+		ADB807AF23D1E01200847897 /* WallpapersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807AE23D1E01200847897 /* WallpapersVC.swift */; };
 		ADB807B223D1E01200847897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB807B023D1E01200847897 /* Main.storyboard */; };
 		ADB807B423D1E01300847897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADB807B323D1E01300847897 /* Assets.xcassets */; };
 		ADB807B723D1E01300847897 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADB807B523D1E01300847897 /* LaunchScreen.storyboard */; };
 		ADB807BF23D1E61800847897 /* BaseLivePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807BE23D1E61800847897 /* BaseLivePhotoViewController.swift */; };
 		ADB807C123D1E6A600847897 /* LivePhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807C023D1E6A600847897 /* LivePhoto.swift */; };
-		ADB807C323D1E73100847897 /* LivePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB807C223D1E73100847897 /* LivePhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,18 +38,17 @@
 		ADAFAE7C23D2F55B00670EB4 /* video1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video1.mov; sourceTree = "<group>"; };
 		ADAFAE8323D2FA6000670EB4 /* Wallpaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallpaper.swift; sourceTree = "<group>"; };
 		ADAFAE8623D2FB6400670EB4 /* WallpaperList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperList.swift; sourceTree = "<group>"; };
-		ADAFAE8823D30CE400670EB4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ADAFAE8823D30CE400670EB4 /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		ADAFAE8A23D334BD00670EB4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		ADB807A923D1E01200847897 /* Live Wallpapers Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Live Wallpapers Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB807AC23D1E01200847897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADB807AE23D1E01200847897 /* MainWallpapersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWallpapersVC.swift; sourceTree = "<group>"; };
+		ADB807AE23D1E01200847897 /* WallpapersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpapersVC.swift; sourceTree = "<group>"; };
 		ADB807B123D1E01200847897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADB807B323D1E01300847897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADB807B623D1E01300847897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADB807B823D1E01300847897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADB807BE23D1E61800847897 /* BaseLivePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLivePhotoViewController.swift; sourceTree = "<group>"; };
 		ADB807C023D1E6A600847897 /* LivePhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhoto.swift; sourceTree = "<group>"; };
-		ADB807C223D1E73100847897 /* LivePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhotoViewController.swift; sourceTree = "<group>"; };
 		DC16DE09A18FE95B865DBDA9 /* Pods-Live Wallpapers Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Live Wallpapers Test.release.xcconfig"; path = "Target Support Files/Pods-Live Wallpapers Test/Pods-Live Wallpapers Test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,10 +84,9 @@
 		ADAFAE8C23D339C000670EB4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ADB807AE23D1E01200847897 /* MainWallpapersVC.swift */,
-				ADAFAE8823D30CE400670EB4 /* SecondViewController.swift */,
+				ADAFAE8823D30CE400670EB4 /* MenuVC.swift */,
+				ADB807AE23D1E01200847897 /* WallpapersVC.swift */,
 				ADB807BE23D1E61800847897 /* BaseLivePhotoViewController.swift */,
-				ADB807C223D1E73100847897 /* LivePhotoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,10 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADAFAE8B23D334BD00670EB4 /* Extension.swift in Sources */,
-				ADAFAE8923D30CE400670EB4 /* SecondViewController.swift in Sources */,
-				ADB807C323D1E73100847897 /* LivePhotoViewController.swift in Sources */,
+				ADAFAE8923D30CE400670EB4 /* MenuVC.swift in Sources */,
 				ADB807C123D1E6A600847897 /* LivePhoto.swift in Sources */,
-				ADB807AF23D1E01200847897 /* MainWallpapersVC.swift in Sources */,
+				ADB807AF23D1E01200847897 /* WallpapersVC.swift in Sources */,
 				ADAFAE8723D2FB6400670EB4 /* WallpaperList.swift in Sources */,
 				ADB807BF23D1E61800847897 /* BaseLivePhotoViewController.swift in Sources */,
 				ADAFAE8423D2FA6000670EB4 /* Wallpaper.swift in Sources */,

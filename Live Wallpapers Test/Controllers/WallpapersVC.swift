@@ -11,25 +11,37 @@ import PhotosUI
 import AVFoundation
 import LPLivePhotoGenerator
 
-class MainWallpapersVC: BaseLivePhotoViewController {
+class WallpapersVC: BaseLivePhotoViewController {
   
+  @IBOutlet weak var backButton: UIButton!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet weak var imageView: UIImageView!
   @IBOutlet weak var backView: UIView!
   @IBOutlet weak var saveButton: UIButton!
   
+  var wallpaperIndex = ""
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    backButton.tintColor = .white
     loadResourseToFilemanager()
-    
-    let videoUrl = checkVideoConteint()
-    let imageUrl = checkImageConteint()
-    
-    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!, isSave: false)
-    
+    loadWallpaper(wallpaperIndex)
   }
   
+  override var prefersStatusBarHidden: Bool {
+    return true
+  }
+  
+  func loadWallpaper(_ index: String) {
+    
+    let videoUrl = checkVideoConteint(index)
+    let imageUrl = checkImageConteint(index)
+    
+    renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!, isSave: false)
+  }
+  
+  // determine file path using model for write in FileManager
   func loadResourseToFilemanager() {
     
     let wallpapers = WallpaperList.getWallpaperList()[0].wallpapers
@@ -46,6 +58,7 @@ class MainWallpapersVC: BaseLivePhotoViewController {
     }
   }
   
+  // // load image and video to FileManager
   func copyfileToDocs(_ bundlePath: String, _ filename: String){
     
     print(bundlePath, "\n") //prints the correct path
@@ -66,9 +79,13 @@ class MainWallpapersVC: BaseLivePhotoViewController {
     }
   }
   
-  private func checkImageConteint() -> URL? {
+  // check file availability in FileManager
+  
+  private func checkImageConteint(_ string: String) -> URL? {
     
-    let filename = getDocumentsDirectory().appendingPathComponent("image2.jpg")
+    let namedImageFile = "image\(string).jpg"
+    
+    let filename = getDocumentsDirectory().appendingPathComponent(namedImageFile)
     
     if FileManager.default.fileExists(atPath: filename.path ) {
       print("saccess Image file is found")
@@ -80,9 +97,11 @@ class MainWallpapersVC: BaseLivePhotoViewController {
     }
   }
   
-  private func checkVideoConteint() -> URL? {
+  private func checkVideoConteint(_ string: String) -> URL? {
     
-    let filename = getDocumentsDirectory().appendingPathComponent("video2.mov")
+    let namedVideoFile = "video\(string).mov"
+    
+    let filename = getDocumentsDirectory().appendingPathComponent(namedVideoFile)
     
     if FileManager.default.fileExists(atPath: filename.path ) {
       print("saccess Video file is found")
@@ -95,22 +114,20 @@ class MainWallpapersVC: BaseLivePhotoViewController {
     }
   }
   
-  
+  // render video and image for getting livePhoto and save to photo library
   func renderWallpapers(imageUrl: URL, videoUrl: URL, isSave: Bool?) {
     
-    if isSave == false {
-      DispatchQueue.main.async {
-        self.livePhotoView.alpha = 0
-        self.imageView.alpha = 1
-        let data = try? Data(contentsOf: imageUrl)
-        self.imageView.image = UIImage(data: data!)
-        self.activityIndicator.startAnimating()
-        self.activityIndicator.isHidden = false
-      }
+    DispatchQueue.main.async {
+      self.livePhotoView.alpha = 0
+      self.imageView.alpha = 1
+      let data = try? Data(contentsOf: imageUrl)
+      self.imageView.image = UIImage(data: data!)
+      self.activityIndicator.startAnimating()
+      self.activityIndicator.isHidden = false
     }
     
+    // render video and image for getting livePhoto
     LivePhoto.generate(from: imageUrl, videoURL: videoUrl, progress: { (percent) in
-      print(percent)
       
     }) { [weak self] (livePhoto, resources) in
       self?.livePhotoView.livePhoto = livePhoto
@@ -127,66 +144,41 @@ class MainWallpapersVC: BaseLivePhotoViewController {
           }
         }
         if isSave == true {
+          self?.livePhotoView.alpha = 1
+          self?.imageView.alpha = 0
+          self?.activityIndicator.stopAnimating()
+          self?.activityIndicator.isHidden = true
+          
+          // save livePhoto to photo library
           LivePhoto.saveToLibrary(resources, completion: { (success) in
             
             if success {
-              if success {
-                self?.postAlert("Живая фотография сохранена в гелерею")
-              }
-              else {
-                self?.postAlert("Живая фотография не сохранена")
-              }
+              self?.postAlert("Живая фотография сохранена в гелерею")
+            }
+            else {
+              self?.postAlert("Живая фотография не сохранена")
             }
           })
         }
       }
     }
- 
   }
-  
-  private func saveImagesToDisk(image: UIImage) -> URL? {
-    
-    let namedImageFile = "image3.jpg"
-    
-    let filename = getDocumentsDirectory().appendingPathComponent(namedImageFile)
-    print(filename)
-    
-    do {
-      try image.jpegData(compressionQuality: 1)?.write(to: filename)
-      return filename
-    } catch {
-      print("error save")
-    }
-    return nil
-  }
-  
-  
-  private func saveVideoToDisk(video: Data) -> URL? {
-    
-    let namedVideoFile = "video1.mov"
-    
-    let filename = getDocumentsDirectory().appendingPathComponent(namedVideoFile)
-    
-    do {
-      try video.write(to: filename)
-      return filename
-    } catch let error as NSError {
-      print(error)
-      print("Failed to write")
-    }
-    
-    return nil
-  }
-  
   
   private func getDocumentsDirectory() -> URL {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
     return paths[0]
   }
   
+  @IBAction func backButtonAction(_ sender: Any) {
+    
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    let menuVC = mainStoryboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
+    self.present(menuVC, animated: true)
+  }
+  
   @IBAction func saveButtonAction(_ sender: Any) {
-    let videoUrl = checkVideoConteint()
-    let imageUrl = checkImageConteint()
+    let videoUrl = checkVideoConteint(wallpaperIndex)
+    let imageUrl = checkImageConteint(wallpaperIndex)
     
     renderWallpapers(imageUrl: imageUrl!, videoUrl: videoUrl!, isSave: true)
   }
