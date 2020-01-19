@@ -54,7 +54,7 @@ class BaseLivePhotoViewController: UIViewController, UIImagePickerControllerDele
     super.viewDidAppear(animated)
     
     if self.livePhotoView.livePhoto != nil {
-      self.livePhotoView.startPlayback(with: .full)
+      self.livePhotoView.startPlayback(with: .hint)
       
       DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) { () -> Void in
         self.livePhotoView.stopPlayback()
